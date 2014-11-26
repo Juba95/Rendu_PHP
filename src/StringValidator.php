@@ -73,7 +73,7 @@ class StringValidator
     /**
      * @param $string
      * @param $low
-     * @param $hight
+     * @param $high
      *
      * @throws \Exception
      */
@@ -81,7 +81,7 @@ class StringValidator
     {
         is_string($string);
         is_int($low);
-        is_int($hight);
+        is_int($high);
         $lengthString = mb_strlen($string);
 
         if (!is_string($string) OR ! is_int($low) AND !is_int($high))

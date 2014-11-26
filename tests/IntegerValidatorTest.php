@@ -56,7 +56,7 @@ class IntegerValidatorTest extends  \PHPUnit_Framework_TestCase
        $integer = rand(85,150);
        $integerTwo = rand(10,180);
 
-       $result = IntegerValidator::Superior($integer, $integer);
+       $result = IntegerValidator::Superior($integer, $integerTwo);
 
        $this->assertTrue($result);
    }
@@ -84,7 +84,7 @@ class IntegerValidatorTest extends  \PHPUnit_Framework_TestCase
        $integer = rand(10,80);
        $integerTwo = rand(85,150);
 
-       $result = IntegerValidator::Inferior($integer, $integer);
+       $result = IntegerValidator::Inferior($integer, $integerTwo);
 
        $this->assertTrue($result);
    }
@@ -108,8 +108,8 @@ class IntegerValidatorTest extends  \PHPUnit_Framework_TestCase
      */
     public function testBetweenTrue()
     {
-        $low = rand(50,10);
-        $integer = rand(10,20);
+        $low = rand(12,14);
+        $integer = rand(15,20);
         $high = rand(80,120);
 
         $result = IntegerValidator::between($integer, $low, $high);

@@ -38,7 +38,7 @@ class StringValidatorTest extends  \PHPUnit_Framework_TestCase
     public function testLengthEqualFalse()
     {
         $string = "defends";
-        $length = mb_strlen($string) + 8;
+        $length = mb_strlen($string) + 1;
 
         $result = StringValidator::lengthEqual($string, $length);
 
@@ -68,7 +68,7 @@ class StringValidatorTest extends  \PHPUnit_Framework_TestCase
     public function testLengthSuperiorFalse()
     {
         $string = "defends";
-        $length = (mb_strlen($string)+15);
+        $length = (mb_strlen($string)+2);
 
         $result = StringValidator::lengthSuperior($string, $length);
 
@@ -155,7 +155,7 @@ class StringValidatorTest extends  \PHPUnit_Framework_TestCase
      */
     public function testNoWhiteSpaceFalse()
     {
-        $string = "defends";
+        $string = " defends";
 
         $result = StringValidator::noWhiteSpace($string);
 
@@ -183,7 +183,7 @@ class StringValidatorTest extends  \PHPUnit_Framework_TestCase
      */
     public function testNoWhiteSpaceStartEndFalse()
     {
-        $string = "defends";
+        $string = " defends ";
 
         $result = StringValidator::noSpace($string);
 

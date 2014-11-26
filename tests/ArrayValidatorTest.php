@@ -80,7 +80,7 @@ class ArrayValidatorTest extends \PHPUnit_Framework_TestCase
     {
         $array = ['brand' => 'nike', 'color' => 'white', 'brand_style' => 'comma'];
 
-        $result = ArrayValidator::arrayBetween($array, 4, 9);
+        $result = ArrayValidator::arrayBetween($array, 0, 1);
 
         $this->assertFalse($result);
     }
@@ -92,7 +92,7 @@ class ArrayValidatorTest extends \PHPUnit_Framework_TestCase
      */
     public function testKeyExistsTrue()
     {
-        $array = ['apple'];
+        $array = ['apple' => 'red'];
 
         $result = ArrayValidator::keyExists($array, 'apple');
 
@@ -106,7 +106,7 @@ class ArrayValidatorTest extends \PHPUnit_Framework_TestCase
      */
     public function testKeyExistsFalse()
     {
-        $array = ['apple'];
+        $array = ['apple' => 'red'];
 
         $result = ArrayValidator::keyExists($array, 'fiat');
 
