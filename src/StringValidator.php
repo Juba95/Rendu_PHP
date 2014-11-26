@@ -22,7 +22,6 @@ class StringValidator
      */
     public static function lengthEqual($string, $length)
     {
-
         is_string($string);
         is_int($length);
 

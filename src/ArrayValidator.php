@@ -21,9 +21,12 @@ class ArrayValidator
      * @param $myArray
      * @return bool
      */
-    public static function isEmpty($item, $key, &$val)
+    public static function isEmpty($array)
     {
-        $val[0] += ( true === empty($item) ) ? 1 : 0;
+        if(!is_array($array))
+            throw new \Exception("Is not an array.");
+
+        return (empty($array)) ? true : false;
     }
 
     /**

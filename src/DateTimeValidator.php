@@ -24,6 +24,7 @@ class DateTimeValidator
     {
         $now = new \DateTime();
         $interval = $dateTime->diff($now);
+
         return ($interval->y >= 18) ? true : false;
     }
 
@@ -39,19 +40,7 @@ class DateTimeValidator
     {
         if(!is_string($year))
             throw new \Exception('The month parameter has to be a string.');
-        return (date_format($dateTime, 'Y') === $year) ? true : false;
-    }
 
-    /**
-     * @param $date
-     * @param $format
-     *
-     * @return bool
-     */
-    public static function validateDateTime ($date, $format)
-    {
-        $format = 'Y-m-d H:i:s';
-        $result = DateTime::createFromFormat($format, $date);
-        return $result AND $result->format($format) == $date;
+        return (date_format($dateTime, 'Y') === $year) ? true : false;
     }
 }
