@@ -132,7 +132,7 @@ class ArrayValidatorTest extends \PHPUnit_Framework_TestCase
      *
      * @throws \Exception
      */
-    public function testValueExistsFalse()
+    public function testValueExistFalse()
     {
         $array = ['fruits' => 'apple'];
 

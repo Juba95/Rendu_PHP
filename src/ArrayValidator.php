@@ -117,7 +117,7 @@ class ArrayValidator
      *
      * @throws \Exception
      */
-    public static function valueExist($array, $value)
+    public static function ValueExist($array, $value)
     {
         if(!is_array($array) OR !is_string($value))
             throw new \Exception('Invalid format');
